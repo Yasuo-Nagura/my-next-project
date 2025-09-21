@@ -1,16 +1,17 @@
 import Image from "next/image";
 
 import styles from "./index.module.css";
+import { News } from "@/app/_libs/microcms";
 
-type News = {
-  id: string;
-  title: string;
-  category: {
-    name: string;
-  };
-  publishedAt: string;
-  createdAt: string;
-};
+//type News = {
+//  id: string;
+//  title: string;
+//  category: {
+//    name: string;
+//  };
+//  publishedAt: string;
+//  createdAt: string;
+//};
 
 type Props = {
   news: News[];
@@ -44,6 +45,7 @@ export default function NewsList({ news }: Props) {
                     height={16}
                     priority
                   />
+                  {article.publishedAt}
                 </span>
               </dd>
             </dl>
